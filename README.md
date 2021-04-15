@@ -14,8 +14,9 @@
 1. HTML
 2. CSS
 3. JavaScript
-4. Jquery
-5. Bootstrap4
-6. PHP
+4. Jquery v3.6
+5. Ajax
+6. Bootstrap v4.6
+7. PHP
 ```
 
