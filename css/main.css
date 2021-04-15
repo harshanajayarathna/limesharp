@@ -1,0 +1,10 @@
+.message {
+    font-size: 1rem;;
+}
+.error {
+    color: #a52a2a;
+    /* font-size: 2rem;; */
+}
+.success {
+    color: #38a52a;;
+}
