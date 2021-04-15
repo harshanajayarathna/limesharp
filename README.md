@@ -4,7 +4,8 @@
 
 ```
 1. Download or Clone the repository
-2. Place project on local webserver root directory (If you use xampp, place inside the htdocs folder, In wamp, place inside the www folder) 
+2. Place project on local webserver root directory
+   (If you use xampp, place inside the htdocs folder, In wamp, place inside the www folder) 
 3. Run http://localhost/limesharp/index.html on browser address bar
 ```
 
