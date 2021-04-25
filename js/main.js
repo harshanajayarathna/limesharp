@@ -1,45 +1,48 @@
-// repeat given comma separated vvalues
+// repeat given comma separated values
 function repeatTask()
-{        
-        $.ajax({
-            type: "POST",
-            url: 'main.php',
-            dataType: 'json',
-            data: {functionName: "repeatTask", input: $('#repeat').val()},        
-            success: function (res) {
-                showResults(res, 'repeat');
-            }
-        });
+{
+    const inputValue    = $('#repeat').val();
+    const functionName  = 'repeatTask';
+    const id            = 'repeat';
+
+    proceedTask(functionName, inputValue, id);
 }
 
 
 // reformat given input
 function reformatTask()
 {
-    $.ajax({
-        type: "POST",
-        url: 'main.php',
-        dataType: 'json',
-        data: {functionName: "reformatTask", input: $('#reformat').val()},
-        success: function (res) {
-            showResults(res, 'reformat');
-        }
-    });
+    const inputValue    = $('#reformat').val();
+    const functionName  = 'reformatTask';
+    const id            = 'reformat';
+
+    proceedTask(functionName, inputValue, id);
 }
 
 // generate next binary number
 function nextBinaryNumberTask()
 {
+    const inputValue    = $('#binary').val();
+    const functionName  = 'nextBinaryNumberTask';
+    const id            = 'binary';
+
+    proceedTask(functionName, inputValue, id);
+}
+
+// call php function
+function proceedTask(functionName, inputValue, id)
+{
     $.ajax({
         type: "POST",
         url: 'main.php',
         dataType: 'json',
-        data: {functionName: "nextBinaryNumberTask", input: $('#binary').val()},        
+        data: {functionName: functionName, input: inputValue},
         success: function (res) {
-           showResults(res, 'binary');
+           showResults(res, id);
         }
     });
 }
+
 
 // show results
 function showResults(res, id)
